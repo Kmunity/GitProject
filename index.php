@@ -19,7 +19,7 @@
 	</div>  <!-- end of menu --> 
 
   <div id="content">
-		<div id="main_img"><img src="./img/page.gif"></div>
+		<div id="main_img"><img src="./img/main_img.jpg"></div>
   </div> <!-- end of content -->
 </div> <!-- end of wrap -->
 

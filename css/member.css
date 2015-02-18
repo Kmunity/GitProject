@@ -21,6 +21,7 @@
 }
 
 #content #col2 #form_join #join1 {
+	/*float left를 사용하여 form_join 옆에 붙인다*/
 	float:left;
 	width:120px;
 	height:250px;
