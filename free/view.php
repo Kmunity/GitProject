@@ -2,7 +2,7 @@
 	session_start(); 
 	include "../lib/dbconn.php";
 
-	$sql = "select * from $table where num=$num";
+	$sql = "select * from $_GET[table] where num=$_GET[num]";
 	$result = mysql_query($sql, $connect);
     $row = mysql_fetch_array($result);       
 	
@@ -50,7 +50,7 @@
 		}
 	}
 	$new_hit = $item_hit + 1;
-	$sql = "update $table set hit=$new_hit where num=$num";   // 글 조회수 증가시킴
+	$sql = "update $_GET[table] set hit=$new_hit where num=$_GET[num]";   // 글 조회수 증가시킴
 	mysql_query($sql, $connect);
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -91,15 +91,7 @@
   </div>  <!-- end of menu --> 
 
   <div id="content">
-	<div id="col1">
-		<div id="left_menu">
-<?
-			include "../lib/left_menu.php";
-?>
-		</div>
-	</div>
-
-	<div id="col2">        
+<div id="col2">        
 		<div id="title">
 			<img src="../img/title_free.gif">
 		</div>
@@ -147,8 +139,8 @@
 			<li id="writer_title2"><?=$ripple_date?></li>
 			<li id="writer_title3"> 
 		      <? 
-					if($userid=="admin" || $userid==$ripple_id)
-			          echo "<a href='delete_ripple.php?table=$table&num=$item_num&ripple_num=$ripple_num'>[삭제]</a>"; 
+					if($_SESSION[userid]=="admin" || $_SESSION[userid]==$ripple_id)
+			          echo "<a href='delete_ripple.php?table=$_GET[table]&num=$item_num&ripple_num=$ripple_num'>[삭제]</a>"; 
 			  ?>
 			</li>
 			</ul>

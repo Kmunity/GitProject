@@ -4,7 +4,7 @@
 
 	if ($mode=="modify")
 	{
-		$sql = "select * from $table where num=$num";
+		$sql = "select * from $_GET[table] where num=$num";
 		$result = mysql_query($sql, $connect);
 		$row = mysql_fetch_array($result);       
 	
@@ -71,19 +71,20 @@
 	if($mode=="modify")
 	{
 ?>
-		<form  name="board_form" method="post" action="insert.php?mode=modify&num=<?=$num?>&page=<?=$page?>&table=<?=$table?>" enctype="multipart/form-data"> 
+		<form  name="board_form" method="post" action="insert.php?mode=modify&num=<?=$num?>&page=<?=$_GET[page]?>&table=<?=$_GET[table]?>" enctype="multipart/form-data"> 
 <?
 	}
 	else
 	{
 ?>
-		<form  name="board_form" method="post" action="insert.php?table=<?=$table?>" enctype="multipart/form-data"> 
+		<form  name="board_form" method="post" action="insert.php?table=<?=$_GET[table]?>" enctype="multipart/form-data"> 
 <?
 	}
 ?>
+
 		<div id="write_form">
 			<div class="write_line"></div>
-			<div id="write_row1"><div class="col1"> 별명 </div><div class="col2"><?=$_SESSION[usernick]?></div>
+			<div id="write_row1"><div class="col1"> 닉네임 </div><div class="col2"><?=$_SESSION[usernick]?></div>
 <?
 	if( $_SESSION[userid] && ($_GET[mode] != "modify"))
 	{

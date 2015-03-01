@@ -3,7 +3,7 @@
 ?>
 <meta charset="euc-kr">
 <?
-   if(!$userid) {
+   if(!$_SESSION[userid]) {
      echo("
 	   <script>
 	     window.alert('로그인 후 이용하세요.')
@@ -18,14 +18,14 @@
 
    // 레코드 삽입 명령
    $sql = "insert into free_ripple (parent, id, name, nick, content, regist_day) ";
-   $sql .= "values($num, '$userid', '$username', '$usernick', '$ripple_content', '$regist_day')";    
+   $sql .= "values($_GET[num], '$_SESSION[userid]', '$_SESSION[username]', '$_SESSION[usernick]', '$_POST[ripple_content]', '$regist_day')";    
    
    mysql_query($sql, $connect);  // $sql 에 저장된 명령 실행
    mysql_close();                // DB 연결 끊기
 
    echo "
 	   <script>
-	    location.href = 'view.php?table=$table&num=$num';
+	    location.href = 'view.php?table=free&num=$_GET[num]';
 	   </script>
 	";
 ?>
