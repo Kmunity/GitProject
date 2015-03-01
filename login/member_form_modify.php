@@ -93,7 +93,7 @@
 <?
     include "../lib/dbconn.php";
 
-    $sql = "select * from member where id='$userid'";
+    $sql = "select * from member where id='$_SESSION[userid]'";
     $result = mysql_query($sql, $connect);
 
     $row = mysql_fetch_array($result);
@@ -120,16 +120,8 @@
   </div>  <!-- end of menu --> 
   
   <div id="content">
-	<div id="col1">
-		<div id="left_menu">
-<?
-			include "../lib/left_menu.php";
-?>
-		</div>
-	</div> <!-- end of col1 -->
-
 	<div id="col2">
-        <form  name="member_form" method="post" action="modify.php"> 
+       <form  name="member_form" method="post" action="modify.php"> 
 		<div id="title">
 			<img src="../img/title_member_modify.gif">
 		</div>

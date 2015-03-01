@@ -106,14 +106,6 @@
   </div>  <!-- end of menu --> 
 
   <div id="content">
-	<div id="col1">
-		<div id="left_menu">
-<?
-			include "../lib/left_menu.php";
-?>
-		</div>
-	</div> <!-- end of col1 -->
-
 	<div id="col2">
         <form  name="member_form" method="post" action="insert.php"> 
 		<div id="title"><!-- 회원가입 이미지-->

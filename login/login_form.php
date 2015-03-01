@@ -18,15 +18,6 @@
   </div>  <!-- end of menu --> 
 
   <div id="content">
-	<div id="col1">
-		<div id="left_menu">
-<?
-			include "../lib/left_menu.php";
-?>
-		</div>
-	</div> <!-- end of col1 -->
-
-	<div id="col2">
         <form  name="member_form" method="post" action="login.php"> 
 		<div id="title">
 			<img src="../img/title_login.gif">
@@ -66,8 +57,7 @@
 		</div> <!-- end of form_login -->
 
 	    </form>
-	</div> <!-- end of col2 -->
-  </div> <!-- end of content -->
+ </div> <!-- end of content -->
 </div> <!-- end of wrap -->
 
 </body>

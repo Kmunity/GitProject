@@ -16,12 +16,14 @@
 
 	<div id="menu">
 	<? include "./lib/top_menu1.php"; ?>
-	</div>  <!-- end of menu --> 
+    </div>	<!-- end of menu -->
 
-  <div id="content">
-		<div id="main_img"><img src="./img/main_img.jpg"></div>
-  </div> <!-- end of content -->
-</div> <!-- end of wrap -->
+<div id="content">
+	<div id="main_img"><img src="img/main_img.jpg"></div>
+</div>
+
+</div>	<!-- end of content -->
+</div>	<!-- end of wrap -->
 
 </body>
 </html>
