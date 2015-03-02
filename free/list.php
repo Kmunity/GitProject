@@ -14,9 +14,9 @@
 	include "../lib/dbconn.php";
 	$scale=10;			// 한 화면에 표시되는 글 수
 
-    if ($mode=="search")
+    if ($_GET[mode]=="search")
 	{
-		if(!$search)
+		if(!$_POST[search])
 		{
 			echo("
 				<script>
@@ -26,7 +26,7 @@
 			");
 			exit;
 		}
-		$sql = "select * from $table where $find like '%$search%' order by num desc";
+		$sql = "select * from $_GET[table] where $_POST[find] like '%$_POST[search]%' order by num desc";
 	}
 	else
 	{
@@ -41,6 +41,8 @@
 		$total_page = floor($total_record/$scale);      
 	else
 		$total_page = floor($total_record/$scale) + 1; 
+
+	$page = $_GET[page];
  
 	if (!$page)                 // 페이지번호($page)가 0 일 때
 		$page = 1;              // 페이지 번호를 1로 초기화
@@ -114,7 +116,7 @@
 ?>
 			<div id="list_item">
 				<div id="list_item1"><?= $number ?></div>
-				<div id="list_item2"><a href="view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>"><?= $item_subject ?></a>
+				<div id="list_item2"><a href="view.php?table=<?=$_GET[table]?>&num=<?=$item_num?>&page=<?=$_GET[page]?>"><?= $item_subject ?></a>
 <?
 		if ($num_ripple)
 				echo " [$num_ripple]";
