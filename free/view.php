@@ -98,7 +98,7 @@
 
 		<div id="view_comment"> &nbsp;</div>
 		<div id="view_title">
-			<div id="view_title1"><?= $item_subject ?></div><div id="view_title2"><?= $item_nick ?> | 조회 : <?= $item_hit ?>  
+			<div id="view_title1"><b><?= $item_subject ?></b></div><div id="view_title2"><?= $item_nick ?> | 조회 : <?= $item_hit ?>  
 			                      | <?= $item_date ?> </div>	
 		</div>
 

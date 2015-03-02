@@ -106,7 +106,6 @@
 			<div id="write_row4"><div class="col1"> 이미지파일1   </div>
 			                     <div class="col2"><input type="file" name="upfile[]"></div>
 			</div>
-			<div class="clear"></div>
 <? 	if ($mode=="modify" && $item_file_0)
 	{
 ?>
