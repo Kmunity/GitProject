@@ -21,10 +21,11 @@
 		<div id="title">
 			<img src="../img/title_sitemap.gif">
 		</div>
-		무슨관련사이트 					/					학교관련사이트
 		<div>
 			<div id="sites"><a href="http://www.naver.com"><img src="../img/site1.gif" width="300" height="100"></a></div>
 			<div id="sites"><a href="https://github.com"><img src="../img/site2.gif" width="300" height="100"></a></div>
+			<div id="sites"><a href="http://cyber.ybmsisa.com/kookmin/"><img src="../img/site4.gif" width="300" height="100"></a></div>
+		
 		</div>
 	</div>
   </div>

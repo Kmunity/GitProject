@@ -163,19 +163,19 @@
 		<div id="view_button">
 				<a href="list.php?table=<?=$table?>&page=<?=$page?>"><img src="../img/list.png"></a>&nbsp;
 <? 
-	if($userid && ($userid==$item_id))
+	if($_SESSION[userid] && ($_SESSION[userid]==$item_id))
 	{
 ?>
-				<a href="write_form.php?table=<?=$table?>&mode=modify&num=<?=$num?>&page=<?=$page?>"><img src="../img/modify.png"></a>&nbsp;
-				<a href="javascript:del('delete.php?table=<?=$table?>&num=<?=$num?>')"><img src="../img/delete.png"></a>&nbsp;
+				<a href="write_form.php?table=<?=$_GET[table]?>&mode=modify&num=<?=$_GET[num]?>&page=<?=$page?>"><img src="../img/modify.png"></a>&nbsp;
+				<a href="javascript:del('delete.php?table=<?=$_GET[table]?>&num=<?=$_GET[num]?>')"><img src="../img/delete.png"></a>&nbsp;
 <?
 	}
 ?>
 <? 
-	if($userid)
+	if($_GET[userid])
 	{
 ?>
-				<a href="write_form.php?table=<?=$table?>"><img src="../img/write.png"></a>
+				<a href="write_form.php?table=<?=$_GET[table]?>"><img src="../img/write.png"></a>
 <?
 	}
 ?>

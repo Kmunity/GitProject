@@ -2,7 +2,7 @@
    session_start();
    include "../lib/dbconn.php";
 
-   $sql = "select * from $table where num = $num";
+   $sql = "select * from $_GET[table] where num = $_GET[num]";
    $result = mysql_query($sql, $connect);
 
    $row = mysql_fetch_array($result);
@@ -20,14 +20,14 @@
 	   }
    }
 
-   $sql = "delete from $table where num = $num";
+   $sql = "delete from $_GET[table] where num = $_GET[num]";
    mysql_query($sql, $connect);
 
    mysql_close();
 
    echo "
 	   <script>
-	    location.href = 'list.php?table=$table';
+	    location.href = 'list.php?table=$_GET[table]';
 	   </script>
 	";
 ?>
