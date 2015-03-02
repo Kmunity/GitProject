@@ -1,5 +1,5 @@
     <div id="logo"><a href="../index.php"><img src="../img/logo_new.gif" border="0"></a></div>
-	<div id="moto"><img src="../img/moto.gif"></div>
+	<div id="moto"><a href="../index.php"><img src="../img/moto.gif"></a></div>
 	<div id="top_login">
 <?
     if(!$_SESSION[userid])
