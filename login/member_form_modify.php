@@ -17,7 +17,7 @@
 
    function check_nick()
    {
-     window.open("check_nick.php?nick=" + document.member_form.nick.value,
+     window.open("../member/check_nick.php?nick=" + document.member_form.nick.value,
          "NICKcheck",
           "left=200,top=200,width=250,height=100,scrollbars=no,resizable=yes");
    }
@@ -71,6 +71,11 @@
       document.member_form.submit();
    }
 
+	function reset_form()
+	{
+		window.history.go(-1); 
+	}
+/*
    function reset_form()
    {
       document.member_form.id.value = "";
@@ -88,6 +93,7 @@
 
       return;
    }
+*/
 </script>
 </head>
 <?
@@ -157,7 +163,7 @@
 		</div>
 
 		<div id="button"><a href="#"><img src="../img/button_save.gif"  onclick="check_input()"></a>&nbsp;&nbsp;
-		                 <a href="#"><img src="../img/button_reset.gif" onclick="reset_form()"></a>
+		                 <a href="#"><input type="image" src="../img/button_reset.gif" onclick="history.back()"></a>
 		</div>
 	    </form>
 	</div>

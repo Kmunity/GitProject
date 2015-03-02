@@ -1,3 +1,10 @@
+#sites {
+	width:300px;
+	height:100px;
+
+	border: solid 1px #cccccc;
+}
+
 #content #col2 {
 	width:807px;
 	min-height:558px;
