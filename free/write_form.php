@@ -1,10 +1,11 @@
 <? 
 	session_start(); 
 	include "../lib/dbconn.php";
-
-	if ($mode=="modify")
+	include "../lib/time_out2.php";
+	
+	if ($_GET[mode]=="modify")
 	{
-		$sql = "select * from $_GET[table] where num=$num";
+		$sql = "select * from $_GET[table] where num=$_GET[num]";
 		$result = mysql_query($sql, $connect);
 		$row = mysql_fetch_array($result);       
 	
@@ -30,7 +31,7 @@
    {
       if (!document.board_form.subject.value)
       {
-          alert("제목을 입력하세요1");    
+          alert("제목을 입력하세요!");    
           document.board_form.subject.focus();
           return;
       }
@@ -68,10 +69,10 @@
 		</div>
 		<div class="clear"></div>
 <?
-	if($mode=="modify")
+	if($_GET[mode]=="modify")
 	{
 ?>
-		<form  name="board_form" method="post" action="insert.php?mode=modify&num=<?=$num?>&page=<?=$_GET[page]?>&table=<?=$_GET[table]?>" enctype="multipart/form-data"> 
+		<form  name="board_form" method="post" action="insert.php?mode=modify&num=<?=$_GET[num]?>&page=<?=$_GET[page]?>&table=<?=$_GET[table]?>" enctype="multipart/form-data"> 
 <?
 	}
 	else
@@ -106,7 +107,7 @@
 			<div id="write_row4"><div class="col1"> 이미지파일1   </div>
 			                     <div class="col2"><input type="file" name="upfile[]"></div>
 			</div>
-<? 	if ($mode=="modify" && $item_file_0)
+<? 	if ($_GET[mode]=="modify" && $item_file_0)
 	{
 ?>
 			<div class="delete_ok"><?=$item_file_0?> 파일이 등록되어 있습니다. <input type="checkbox" name="del_file[]" value="0"> 삭제</div>
@@ -118,7 +119,7 @@
 			<div id="write_row5"><div class="col1"> 이미지파일2  </div>
 			                     <div class="col2"><input type="file" name="upfile[]"></div>
 			</div>
-<? 	if ($mode=="modify" && $item_file_1)
+<? 	if ($_GET[mode]=="modify" && $item_file_1)
 	{
 ?>
 			<div class="delete_ok"><?=$item_file_1?> 파일이 등록되어 있습니다. <input type="checkbox" name="del_file[]" value="1"> 삭제</div>

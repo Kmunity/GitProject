@@ -1,5 +1,6 @@
 <?
 	session_start();
+	include "../lib/time_out2.php";
 ?>
 <meta charset="euc-kr">
 <?

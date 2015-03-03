@@ -1,5 +1,7 @@
 <? 
 	session_start(); 
+	include "../lib/time_out2.php";
+
 	$table = "free";
 	$ripple = "free_ripple";
 ?>
@@ -116,7 +118,7 @@
 ?>
 			<div id="list_item">
 				<div id="list_item1"><?= $number ?></div>
-				<div id="list_item2"><a href="view.php?table=<?=$_GET[table]?>&num=<?=$item_num?>&page=<?=$_GET[page]?>"><?= $item_subject ?></a>
+				<div id="list_item2"><a href="view.php?table=<?=$table?>&num=<?=$item_num?>&page=<?=$page?>"><?= $item_subject ?></a>
 <?
 		if ($num_ripple)
 				echo " [$num_ripple]";

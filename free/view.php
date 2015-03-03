@@ -1,5 +1,6 @@
 <? 
 	session_start(); 
+	include "../lib/time_out2.php";
 	include "../lib/dbconn.php";
 
 	$sql = "select * from $_GET[table] where num=$_GET[num]";
@@ -166,20 +167,12 @@
 	if($_SESSION[userid] && ($_SESSION[userid]==$item_id))
 	{
 ?>
-				<a href="write_form.php?table=<?=$_GET[table]?>&mode=modify&num=<?=$_GET[num]?>&page=<?=$page?>"><img src="../img/modify.png"></a>&nbsp;
+				<a href="write_form.php?table=<?=$_GET[table]?>&mode=modify&num=<?=$_GET[num]?>&page=<?=$_GET[page]?>"><img src="../img/modify.png"></a>&nbsp;
 				<a href="javascript:del('delete.php?table=<?=$_GET[table]?>&num=<?=$_GET[num]?>')"><img src="../img/delete.png"></a>&nbsp;
 <?
 	}
 ?>
-<? 
-	if($_GET[userid])
-	{
-?>
-				<a href="write_form.php?table=<?=$_GET[table]?>"><img src="../img/write.png"></a>
-<?
-	}
-?>
-		</div>
+	</div>
 		<div class="clear"></div>
 
 	</div> <!-- end of col2 -->
