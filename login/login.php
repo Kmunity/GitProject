@@ -72,12 +72,13 @@
            $_SESSION['username'] = $username;
            $_SESSION['usernick'] = $usernick;
            $_SESSION['userlevel'] = $userlevel;
-
+		 $_SESSION['timeout'] = time();
            echo("
               <script>
                 location.href = '../index.php';
               </script>
            ");
+		   //echo "<script>history.go(-2);</script>";
         }
    }          
 ?>

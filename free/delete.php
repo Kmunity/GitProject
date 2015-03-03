@@ -1,7 +1,7 @@
 <?
    session_start();
    include "../lib/dbconn.php";
-
+	include "../lib/time_out2.php";
    $sql = "select * from $_GET[table] where num = $_GET[num]";
    $result = mysql_query($sql, $connect);
 
