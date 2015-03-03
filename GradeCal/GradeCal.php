@@ -1,8 +1,7 @@
 <?
 	#Database Connect
-	$connect=mysql_connect("localhost","jun","1234");
-	mysql_select_db("test",$connect);
-
+	include "../lib/dbconn.php";
+	
 	#Data Convert
 	if($_GET[mode]=="insert" && $_POST[name] != ""){
 		$gradeToPoint = ["A+" => 4.5,
