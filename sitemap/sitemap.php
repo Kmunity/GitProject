@@ -38,7 +38,7 @@
 		</div>
 		<div id="sites">
 			<div id="site_img">
-				<a href="http://www.naver.com"><img src="../img/site1.gif" width="300" height="100"></a>
+				<img src="../img/site1.gif" width="300" height="100" onclick="site_link1()">
 			</div>
 			<div id="site_info">
 				<div id="site_title">
