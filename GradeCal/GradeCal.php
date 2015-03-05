@@ -38,21 +38,21 @@
 		mysql_close();
 	}
 ?>
-<!--í•™ì ì…ë ¥-->
+<!--ÇĞÁ¡ÀÔ·Â-->
 <head>
 <title>Grade Calcuration System</title>
 </head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr"/>
 <h1>Grade Calcuration System</h1>
 <form action="GradeCal.php?mode=insert" method="post">
 <table width="400"border="1" cellpadding="5"><tr>
-	<td>ê³¼ëª©ëª…:<input type="text" size="6" name="name"/></td>
-	<td>í•™ì :<select name="sub">
+	<td>°ú¸ñ¸í:<input type="text" size="6" name="name"/></td>
+	<td>ÇĞÁ¡:<select name="sub">
 			<option value="3">3</option>
 			<option value="2">2</option>
 			<option value="1">1</option>
 			</select></td>
-	<td>ì„±ì :<select name="grade">
+	<td>¼ºÀû:<select name="grade">
 			<option value="A+">A+</option>
 			<option value="A">A</option>
 			<option value="B+">B+</option>
@@ -62,18 +62,18 @@
 			<option value="D+">D+</option>
 			<option value="D">D</option>
 			</select></td>
-	<td><input type="submit" value="ì¶”ê°€í•˜ê¸°"/></td>		
+	<td><input type="submit" value="Ãß°¡ÇÏ±â"/></td>		
 </tr></table>	
 </form>
 <table width="400"border="1" cellpadding="5">
 <tr align="center" bgcolor="#CCCCCC">
-	<td>ë²ˆí˜¸</td>
-	<td>ê³¼ëª©ëª…</td>
-	<td>í•™ì </td>
-	<td>í‰ê°€</td>
-	<td cellpadding="0"><a href="GradeCal.php?mode=deleteAll">[ì „ì²´ì‚­ì œ]</a></td>
+	<td>¹øÈ£</td>
+	<td>°ú¸ñ¸í</td>
+	<td>ÇĞÁ¡</td>
+	<td>Æò°¡</td>
+	<td cellpadding="0"><a href="GradeCal.php?mode=deleteAll">[ÀüÃ¼»èÁ¦]</a></td>
 <tr/>
-<!--ë°ì´í„°ë² ì´ìŠ¤ì¶œë ¥-->
+<!--µ¥ÀÌÅÍº£ÀÌ½ºÃâ·Â-->
 <?
 	#Database Connect
 	$connect = mysql_connect("localhost","jun","1234");
@@ -93,16 +93,16 @@
 		echo "<td>$row[name]</td>";
 		echo "<td>$row[sub]</td>";
 		echo "<td>$row[grade]</td>";
-		echo "<td><a href='GradeCal.php?mode=delete&name=$row[name]'>[ì‚­ì œ]</a></td>";
+		echo "<td><a href='GradeCal.php?mode=delete&name=$row[name]'>[»èÁ¦]</a></td>";
 		echo "</tr>";
 		$count++;
 		$sum+=(int)$row[sub];
 		$total+=$row[sub]*(float)$row[point];
 	}
 	echo "<tr align='center'>";
-	echo "<td>ì´ê³„</td>";
+	echo "<td>ÃÑ°è</td>";
 	echo "<td>$total</td>";
-	echo "<td>í‰ì </td>";
+	echo "<td>ÆòÁ¡</td>";
 	if($sum != 0)
 		$total = round($total / $sum, 2) ;
 	echo "<td colspan='2'>$total</td></tr>";
@@ -110,4 +110,4 @@
 	mysql_close();
 ?>
 </table>
-<p>* íŒ¨ìŠ¤/ë…¸íŒ¨ìŠ¤ ê³¼ëª©ì€ í‰ì ì— í¬í•¨ë˜ì§€ ì•ŠìŒ</p>
+<p>* ÆĞ½º/³ëÆĞ½º °ú¸ñÀº ÆòÁ¡¿¡ Æ÷ÇÔµÇÁö ¾ÊÀ½</p>

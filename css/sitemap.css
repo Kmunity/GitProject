@@ -1,0 +1,46 @@
+#content #col2 {
+	width:807px;
+	min-height:558px;
+	float:left;
+	margin-left:15px;
+}
+
+#content #col2 #title{
+	margin-top:30px;
+	height:30px;
+	border-bottom:solid 1px #cccccc;
+}
+#sites {
+	/*border : solid 1px black;*/
+	width : 600px;
+	height : 100px;
+	padding : 10px;
+}
+#site_img {
+	border : solid 1px #cccccc;
+	float : left;
+}
+#site_img img {
+	cursor : hand;
+}
+#site_title {
+	font-weight : bold;
+	height : 25px;
+	font-size : 150%;
+	text-align : center;
+}
+#site_link {
+	text-align : center;
+	cursor : hand;
+	font-size : 130%;
+	padding-bottom : 5px;
+}
+#site_info {
+	width : 250px;
+	float : left;
+	padding : 10px;
+}
+#site_content {
+	border : solid 1px black;	
+
+}
