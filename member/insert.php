@@ -31,6 +31,15 @@
          ");
          exit;
    }
+   /*else if()			번호가 숫자가 맞는지 검사
+   {
+	   echo("
+	   		<script>
+				window.alert('휴대전화번호가 정확하지 않습니다.')
+				history.go(-1)
+			</script>
+			");
+   }*/
    else
    {            // 레코드 삽입 명령을 $sql에 입력
 	    $sql = "insert into member(id, pass, name, nick, hp, email, regist_day, level) ";
