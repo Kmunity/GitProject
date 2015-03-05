@@ -8,10 +8,9 @@
 	$hp2=$_POST[hp2];
 	$hp3=$_POST[hp3];
 	$email1=$_POST[email1];
-	$email2=$_POST[email2];
 	
    $hp = $hp1."-".$hp2."-".$hp3;
-   $email = $email1."@".$email2;
+   $email = $email1."@kookmin.ac.kr";
 
    $regist_day = date("Y-m-d (H:i)");  // 현재의 '년-월-일-시-분'을 저장
    $ip = $REMOTE_ADDR;         // 방문자의 IP 주소를 저장
@@ -49,9 +48,18 @@
    }
 
    mysql_close();                // DB 연결 끊기
+
+	//확인메일 전송
+	$code = $id;
+	//id를 이용하여 암호화된 코드를 생성하여 메일로 링크를 보냄
+	$message = "
+		가입을 완료하시려면 아래 링크를 눌러주세요.
+		http://localhost/tmp/Kmunity/member/member_level_up?code=$code";
+	mail($email,'Kmunity 인증 메일입니다.',$message);
+
    echo "
 	   <script>
-	    location.href = '../index.php';
+	    location.href = 'insert_confirm.php';
 	   </script>
 	";
 ?>

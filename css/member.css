@@ -180,3 +180,14 @@
 	margin-top:20px;
 	margin-left:30px;
 }
+#insert_confirm {
+	padding-top : 50px;
+	padding-bottom : 30px;
+	text-align : center;
+	font-size : 200%;
+}
+#go_to_main {
+	border-radius : 50px;
+	width : 30%;
+	height : 30%;
+}

@@ -121,7 +121,7 @@
 			<li>* 이름</li>
 			<li>* 닉네임</li>
 			<li>* 휴대폰</li>
-			<li>&nbsp;&nbsp;&nbsp;이메일</li>
+			<li>* 이메일</li>
 			</ul>
 			</div>
 			<div id="join2">
@@ -140,7 +140,7 @@
               <option value='018'>018</option>
               <option value='019'>019</option>
               </select>  - <input type="text" class="hp" maxlength="4" name="hp2"> - <input type="text" class="hp" maxlength="4" name="hp3"></li>
-			<li><input type="text" id="email1" name="email1"> @ <input type="text" name="email2"></li>
+			<li><input type="text" id="email1" name="email1"> @ kookmin.ac.kr</li>
 			</ul>
 			</div>
 			<div class="clear"></div>
