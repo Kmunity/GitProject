@@ -148,9 +148,9 @@
 		</div>
 		 <!-- 저장하기 / 취소하기 버튼-->
 		<div id="button"><a href="#"><img src="../img/button_save.gif"  onclick="check_input()"></a>&nbsp;&nbsp;
-		                 <a href="#"><img src="../img/button_reset.gif" onclick="reset_form()"></a>
+						 <a href="#"><input type="image"  src="../img/button_reset.gif" onclick="history.back()"></a>
 		</div>
-	    </form>
+		</form>
 	</div> <!-- end of col2 -->
   </div> <!-- end of content -->
 </div> <!-- end of wrap -->
