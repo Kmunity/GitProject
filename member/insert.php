@@ -59,7 +59,7 @@
 
    echo "
 	   <script>
-	    location.href = 'insert_confirm.php';
+	    location.href = 'insert_confirm.php?email=$email';
 	   </script>
 	";
 ?>

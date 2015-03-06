@@ -26,7 +26,7 @@
 		</div>
 		<div id="insert_confirm">
 			회원가입이 완료되었습니다.<br>
-			<?=$_GET[email]?>@kookmin.ac.kr 메일에서 가입을 확인해 주세요.<br>
+			<?=$_GET[email]?> 메일에서 가입을 확인해 주세요.<br>
 		</div>
 		<div align="center">
 			<a href="../index.php"><img id="go_to_main" src="../img/go_to_main.gif"></a>
