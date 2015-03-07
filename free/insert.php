@@ -15,7 +15,6 @@
 		exit;
 	}
 
-	$table = $_GET[table];
 	$regist_day = date("Y-m-d (H:i)");  // 현재의 '년-월-일-시-분'을 저장
 
 	// 다중 파일 업로드
@@ -137,7 +136,7 @@
 			$content = htmlspecialchars($content);
 		}
 
-		$sql = "insert into $table (id, name, nick, subject, content, regist_day, hit, is_html, ";
+		$sql = "insert into $_GET[table] (id, name, nick, subject, content, regist_day, hit, is_html, ";
 		$sql .= " file_name_0, file_name_1, file_name_2, file_copied_0,  file_copied_1, file_copied_2) ";
 		$sql .= "values('$_SESSION[userid]', '$_SESSION[username]', '$_SESSION[usernick]', '$_POST[subject]', '$_POST[content]', '$regist_day', 0, '$_POST[is_html]', ";
 		$sql .= "'$upfile_name[0]', '$upfile_name[1]',  '$upfile_name[2]', '$copied_file_name[0]', '$copied_file_name[1]','$copied_file_name[2]')";
@@ -147,7 +146,7 @@
 
 	echo "
 	   <script>
-	    location.href = 'list.php?table=$table&page=$_GET[page]';
+	    location.href = 'list.php?table=$_GET[table]&page=$_GET[page]';
 	   </script>
 	";
 ?>

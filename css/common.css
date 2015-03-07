@@ -76,7 +76,11 @@ ul, li {
 .menus {
 	float:left;
 }
-
+#chat {
+	overflow:hidden;
+	margin-top:100px;
+	
+}
 #content {
 	overflow:hidden;
 	margin-top:56px;

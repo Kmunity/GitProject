@@ -1,5 +1,5 @@
 <?
-	if($_SESSION['timeout'] && ($_SESSION['timeout'] + 20 * 60) < time())
+	if($_SESSION['timeout'] && ($_SESSION['timeout'] + 1 * 60) < time())
 	{
 		unset($_SESSION['timeout']);
 		unset($_SESSION['userid']);

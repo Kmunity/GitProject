@@ -1,6 +1,4 @@
 <?
-	$user = $_GET[user];
-
 	#Database Connect
 	include "../lib/dbconn.php";
 	
@@ -14,29 +12,28 @@
 						"C" => 2.0,
 						"D+" => 1.5,
 						"D" => 1.0];
-		
+
 		$name = $_POST[name];
 		$sub = $_POST[sub];
 		$grade = $_POST[grade];
 		$point = (float)$gradeToPoint[$grade];
-		
+	
 		#Data Insert
-		$sql="insert into grade (user, name, sub, grade, point)";
-		$sql.=" values ('$user','$name',$sub,'$grade',$point)";
+		$sql="insert into grade values ('$name',$sub,'$grade',$point)";
 
 		$result = mysql_query($sql);
 
 		mysql_close();
 	}
 	else if($_GET[mode]=="delete"){
-		$sql="delete from grade where num='$_GET[num]' and user='$user'";
+		$sql="delete from grade where name='$_GET[name]'";
 		mysql_query($sql);
 
-		mysql_close();
-		Header("Location:GradeCal.php?user=$user");
+		mysql_close($connect);
+		Header("Location:GradeCal.php");
 	}
 	else if($_GET[mode]=="deleteAll"){
-		$sql="delete from grade where user='$user'";
+		$sql="delete from grade";
 		mysql_query($sql);
 		mysql_close();
 	}
@@ -47,7 +44,7 @@
 </head>
 <meta http-equiv="Content-Type" content="text/html; charset=euc-kr"/>
 <h1>Grade Calcuration System</h1>
-<form action="GradeCal.php?mode=insert&user=<?=$user?>" method="post">
+<form action="GradeCal.php?mode=insert" method="post">
 <table width="400"border="1" cellpadding="5"><tr>
 	<td>과목명:<input type="text" size="6" name="name"/></td>
 	<td>학점:<select name="sub">
@@ -74,15 +71,16 @@
 	<td>과목명</td>
 	<td>학점</td>
 	<td>평가</td>
-	<td cellpadding="0"><a href="GradeCal.php?mode=deleteAll&user=<?=$user?>">[전체삭제]</a></td>
+	<td cellpadding="0"><a href="GradeCal.php?mode=deleteAll">[전체삭제]</a></td>
 <tr/>
 <!--데이터베이스출력-->
 <?
 	#Database Connect
-	include "../lib/dbconn.php";	
-	
+	$connect = mysql_connect("localhost","jun","1234");
+	mysql_select_db("test",$connect);
+
 	#Show Data
-	$sql="select * from grade where user = '$user'";
+	$sql="select * from grade";
 	$result=mysql_query($sql);
 
 	$count=1;
@@ -95,7 +93,7 @@
 		echo "<td>$row[name]</td>";
 		echo "<td>$row[sub]</td>";
 		echo "<td>$row[grade]</td>";
-		echo "<td><a href='GradeCal.php?mode=delete&num=$row[num]&user=$user'>[삭제]</a></td>";
+		echo "<td><a href='GradeCal.php?mode=delete&name=$row[name]'>[삭제]</a></td>";
 		echo "</tr>";
 		$count++;
 		$sum+=(int)$row[sub];
