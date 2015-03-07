@@ -162,7 +162,7 @@
 		</div> <!-- end of ripple -->
 
 		<div id="view_button">
-				<a href="list.php?table=<?=$table?>&page=<?=$page?>"><img src="../img/list.png"></a>&nbsp;
+				<a href="list.php?table=<?=$_GET[table]?>&page=<?=$_GET[page]?>"><img src="../img/list.png"></a>&nbsp;
 <? 
 	if($_SESSION[userid] && ($_SESSION[userid]==$item_id))
 	{

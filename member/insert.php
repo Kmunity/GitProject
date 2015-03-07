@@ -11,8 +11,6 @@
 	
    $hp = $hp1."-".$hp2."-".$hp3;
    $email = $email1."@kookmin.ac.kr";
-   $email2 = "gudwns05@kookmin.ac.kr";
-   $email3 = "potter1765@nate.com";
 
    $regist_day = date("Y-m-d (H:i)");  // 현재의 '년-월-일-시-분'을 저장
    $ip = $REMOTE_ADDR;         // 방문자의 IP 주소를 저장
@@ -57,23 +55,13 @@
 	$message = "
 		가입을 완료하시려면 아래 링크를 눌러주세요.
 		http://localhost/tmp/Kmunity/member/member_level_up?code=$code";
-		
-		
-	$mailResult=mail($email,'Kmunity 인증 메일입니다.',$message);
-	$mailResult2=mail($email2,'Kmunity 인증 메일입니다.',$message);
-	$mailResult3=mail($email3,'Kmunity 인증 메일입니다.',$message);
-	
-if($mailResult || $mailResult2 || $mailResult3){
-  echo "mail success";
-  }else  {
-  echo "mail fail";
- }
+	mail($email,'Kmunity 인증 메일입니다.',$message);
 
-  /* echo "
+   echo "
 	   <script>
 	    location.href = 'insert_confirm.php?email=$email';
 	   </script>
-	";*/
+	";
 ?>
 
    
