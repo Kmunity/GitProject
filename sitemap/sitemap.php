@@ -38,59 +38,62 @@
 		</div>
 		<div id="sites">
 			<div id="site_img">
-				<img src="../img/site1.gif" width="300" height="100" onclick="site_link1()">
+				<img src="../img/site_kookmin.gif" width="250" onClick="site_link1()">
 			</div>
 			<div id="site_info">
 				<div id="site_title">
-					네이버
+					국민대학교
 				</div>
-				<div id="site_link" onclick="site_link1()">http://www.naver.com/</div>
+				<div id="site_link" onClick="site_link1()">http://www.kookmin.ac.kr/</div>
 				<div id="site_content">
-					지식in 최고!
+					임성수교수님 너무 멋있어요! 사랑해요!
 				</div>
 			</div>
 		</div> <!-- end of site1 -->
 		<div id="sites">
 			<div id="site_img">
-				<img src="../img/site2.gif" width="300" height="100" onclick="site_link2()">
+				<img src="../img/site_bookstore.gif" width="250"  onClick="site_link2()">
 			</div>
 			<div id="site_info">
 				<div id="site_title">
-					깃허브
+					성곡도서관
 				</div>
-				<div id="site_link" onclick="site_link2()">https://www.github.com/</div>
+				<div id="site_link" onClick="site_link2()">http://lib.kookmin.ac.kr/</div>
 				<div id="site_content">
-					옥토캣 기여어
+					전공책 사지말고 빌리면 개꿀!
 				</div>
 			</div>
 		</div> <!-- end of site2 -->
 		<div id="sites">
 			<div id="site_img">
-				<img src="../img/site3.gif" width="300" height="100" onclick="site_link3()">
+				<img src="../img/site_ktis.gif" width="250" height="88" onClick="site_link3()">
 			</div>
 			<div id="site_info">
 				<div id="site_title">
 					국민대종합정보시스템
 				</div>
-				<div id="site_link" onclick="site_link3()">http://ktis.kookmin.ac.kr/</div>
+				<div id="site_link" onClick="site_link3()">http://ktis.kookmin.ac.kr/</div>
 				<div id="site_content">
 					수강신청 망함!
 				</div>
 			</div>
 		</div> <!-- end of site3 -->
-		<div id="sites">
+
+        <div id="sites">
 			<div id="site_img">
-				<img src="../img/site4.gif" width="300" height="100" onclick="site_link4()">
+				<img src="../img/site4.gif" width="250"onClick="site_link4()">
 			</div>
 			<div id="site_info">
 				<div id="site_title">
 					컴퓨터프로그래밍
 				</div>
-				<div id="site_link" onclick="site_link4()">http://cyber.ybmsisa.com/kookmin/</div>
+				<div id="site_link" onClick="site_link4()">http://cyber.ybmsisa.com/kookmin/</div>
 				<div id="site_content">
 					MOS EXCEL 자격증 따자
 				</div>
-		</div> <!-- end of site4 -->
+		</div> <!-- end of site5 -->
+ 
+        
 	</div>
   </div>
 </div>
