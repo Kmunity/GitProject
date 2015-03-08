@@ -9,10 +9,10 @@
 <link href="../css/sitemap.css" rel="stylesheet" type="text/css" media="all">
 <script>
 	function site_link1(){
-		window.open("http://www.naver.com/");
+		window.open("http://www.kookmin.ac.kr/");
 	}
 	function site_link2(){
-		window.open("https://www.github.com/");
+		window.open("https://www.lib.kookmin.ac.kr/");
 	}
 	function site_link3(){
 		window.open("http://ktis.kookmin.ac.kr/");
@@ -46,7 +46,7 @@
 				</div>
 				<div id="site_link" onClick="site_link1()">http://www.kookmin.ac.kr/</div>
 				<div id="site_content">
-					임성수교수님 너무 멋있어요! 사랑해요!
+					국민대학교 공식 웹 페이지
 				</div>
 			</div>
 		</div> <!-- end of site1 -->
@@ -60,7 +60,8 @@
 				</div>
 				<div id="site_link" onClick="site_link2()">http://lib.kookmin.ac.kr/</div>
 				<div id="site_content">
-					전공책 사지말고 빌리면 개꿀!
+					열람실 좌석 현황과 소장자료 검색을<br>
+					지원하고 모의토익을 볼 수 있는 사이트.
 				</div>
 			</div>
 		</div> <!-- end of site2 -->
@@ -74,7 +75,7 @@
 				</div>
 				<div id="site_link" onClick="site_link3()">http://ktis.kookmin.ac.kr/</div>
 				<div id="site_content">
-					수강신청 망함!
+					수강신청 망함! 
 				</div>
 			</div>
 		</div> <!-- end of site3 -->

@@ -41,16 +41,12 @@
 		mysql_close();
 	}
 ?>
-<!--학점입력--><head>
+<!--학점입력-->
+<head>
 <title>Grade Calcuration System</title>
 </head>
-
 <meta http-equiv="Content-Type" content="text/html; charset=euc-kr"/>
-<div class="menus"><img src="../img/menu_grade.gif" border="0"></div>
-
-
-<div id = space><div>
-
+<h1>Grade Calcuration System</h1>
 <form action="GradeCal.php?mode=insert&user=<?=$user?>" method="post">
 <table width="400"border="1" cellpadding="5"><tr>
 	<td>과목명:<input type="text" size="6" name="name"/></td>
