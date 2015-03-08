@@ -1,3 +1,8 @@
+@font-face{
+	font-family : 'info';
+	src : url('');
+}
+
 #content #col2 {
 	width:807px;
 	min-height:558px;
@@ -12,7 +17,7 @@
 }
 #sites {
 	/*border : solid 1px black;*/
-	width : 600px;
+	width : 700px;
 	height : 100px;
 	padding : 10px;
 }
@@ -22,6 +27,13 @@
 }
 #site_img img {
 	cursor : hand;
+	width : 300px;
+	height : 106px;
+}
+#site_info {
+	width : 350px;
+	float : left;
+	padding : 10px;
 }
 #site_title {
 	font-weight : bold;
@@ -31,16 +43,13 @@
 }
 #site_link {
 	text-align : center;
-	cursor : hand;
 	font-size : 130%;
 	padding-bottom : 5px;
 }
-#site_info {
-	width : 250px;
-	float : left;
-	padding : 10px;
+#site_link a{
+	cursor : hand;
 }
 #site_content {
-	border : solid 1px black;	
+	padding-left : 10px;
 
 }

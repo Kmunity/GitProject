@@ -12,7 +12,7 @@
 		window.open("http://www.naver.com/");
 	}
 	function site_link2(){
-		window.open("https://www.github.com/");
+		window.open("http://www.kmutime.co.kr/");
 	}
 	function site_link3(){
 		window.open("http://ktis.kookmin.ac.kr/");
@@ -38,7 +38,7 @@
 		</div>
 		<div id="sites">
 			<div id="site_img">
-				<img src="../img/site1.gif" width="300" height="100" onclick="site_link1()">
+				<img src="../img/site1.gif" onclick="site_link1()">
 			</div>
 			<div id="site_info">
 				<div id="site_title">
@@ -52,21 +52,22 @@
 		</div> <!-- end of site1 -->
 		<div id="sites">
 			<div id="site_img">
-				<img src="../img/site2.gif" width="300" height="100" onclick="site_link2()">
+				<img src="../img/site2.gif" onclick="site_link2()">
 			</div>
 			<div id="site_info">
 				<div id="site_title">
-					깃허브
+					크무타임
 				</div>
-				<div id="site_link" onclick="site_link2()">https://www.github.com/</div>
+				<div id="site_link" onclick="site_link2()">http://www.kmutime.co.kr</div>
 				<div id="site_content">
-					옥토캣 기여어
+					국민대학교의 전체 강의정보를 정리하여 볼 수 있고<br>
+					모의 시간표작성기능을 지원하는 사이트.
 				</div>
 			</div>
 		</div> <!-- end of site2 -->
 		<div id="sites">
 			<div id="site_img">
-				<img src="../img/site3.gif" width="300" height="100" onclick="site_link3()">
+				<img src="../img/site3.gif" onclick="site_link3()">
 			</div>
 			<div id="site_info">
 				<div id="site_title">
@@ -80,7 +81,7 @@
 		</div> <!-- end of site3 -->
 		<div id="sites">
 			<div id="site_img">
-				<img src="../img/site4.gif" width="300" height="100" onclick="site_link4()">
+				<img src="../img/site4.gif" onclick="site_link4()">
 			</div>
 			<div id="site_info">
 				<div id="site_title">
@@ -88,7 +89,8 @@
 				</div>
 				<div id="site_link" onclick="site_link4()">http://cyber.ybmsisa.com/kookmin/</div>
 				<div id="site_content">
-					MOS EXCEL 자격증 따자
+					MOS EXCEL자격증을 따기위한 인터넷 강의를<br>
+					수강할 수 있는 사이트.		
 				</div>
 		</div> <!-- end of site4 -->
 	</div>
