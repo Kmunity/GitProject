@@ -18,10 +18,15 @@
   <div id="menu">
 	<? include "../lib/top_menu2.php"; ?>
   </div>  <!-- end of menu --> 
-
-<div id="chat">
-<embed height="400" width="90%" src="http://www.gagalive.kr/livechat1.swf?chatroom=kmuity&user=<?=$_SESSION[usernick]?>"></embed> 
-</div>
+  <div id="content">
+	<div id="col2">    
+    		<div id="title">
+			<img src="../img/title_chat.gif">
+			</div>
+			<div id="chat">
+			<embed height="400" width="90%" src="http://www.gagalive.kr/livechat1.swf?chatroom=kmuity&user=<?=$_SESSION[usernick]?>"></embed> 
+			</div>
+		</div>
 
 </div>	<!-- end of content -->
 </div>	<!-- end of wrap -->
