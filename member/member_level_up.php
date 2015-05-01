@@ -4,7 +4,7 @@
 	include "../lib/dbconn.php";
 	//코드를 복호화 하는 과정은 미구현
 
-	$sql = "UPDATE member SET level=8 WHERE id='$_GET[code]'";
+	$sql = "UPDATE member SET level=1 WHERE id='$_GET[code]'";
 
 	$result = mysql_query($sql,$connect);
 

@@ -4,6 +4,8 @@
 ?>
 <meta charset="euc-kr">
 <?
+
+	date_default_timezone_set('Asia/Seoul');
    if(!$_SESSION[userid]) {
      echo("
 	   <script>

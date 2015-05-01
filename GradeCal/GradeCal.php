@@ -41,12 +41,12 @@
 		mysql_close();
 	}
 ?>
-<!--학점입력-->
-<head>
-<title>Grade Calcuration System</title>
+<!--학점입력--><head>
+<title>Grade Calculation System</title>
 </head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=euc-kr"/>
-<h1>Grade Calcuration System</h1>
+<h1>Grade Calculation System</h1>
 <form action="GradeCal.php?mode=insert&user=<?=$user?>" method="post">
 <table width="400"border="1" cellpadding="5"><tr>
 	<td>과목명:<input type="text" size="6" name="name"/></td>
@@ -84,6 +84,12 @@
 	#Show Data
 	$sql="select * from grade where user = '$user'";
 	$result=mysql_query($sql);
+	
+	if($result === FALSE) { 
+    	die(mysql_error()); // TODO: better error handling
+	}
+
+
 
 	$count=1;
 	(float)$total=0.0;

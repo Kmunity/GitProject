@@ -54,7 +54,7 @@
 	//id를 이용하여 암호화된 코드를 생성하여 메일로 링크를 보냄
 	$message = "
 		가입을 완료하시려면 아래 링크를 눌러주세요.
-		http://localhost/tmp/Kmunity/member/member_level_up?code=$code";
+		http://localhost/Kmunity/member/member_level_up.php?code=$code";
 	mail($email,'Kmunity 인증 메일입니다.',$message);
 
    echo "
